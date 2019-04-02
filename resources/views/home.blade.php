@@ -3,21 +3,18 @@
 @endsection
 @section('content')
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" style="max-height: 700px">
-            <div class="overlay"></div>
-            <div class="carousel-item active">
-                <img src="storage/images/1.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="storage/images/2.jpeg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="storage/images/3.jpeg" class=" d-blockw-100" alt="...">
-            </div>
+<div class="container-fluid" style="background-color: #B23300; border-top: 1px solid #fff;border-bottom: 1px solid #fff;">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <img src="storage/images/1.png"  alt="logo" style="padding: 20px; width: 100%">
         </div>
+        <div class="col-sm-3"></div>
     </div>
-    </div>
+
+</div>
+
+
 @endsection
 
 
