@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $first_blog = \App\BlogText::all()->last();
+        $places = \App\BlogText::select('place')->distinct('place')->get();
+        return view('home', ['first_blog' => $first_blog, 'places'=>$places]);
     }
 }

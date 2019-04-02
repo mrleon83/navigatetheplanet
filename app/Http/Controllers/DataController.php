@@ -70,7 +70,7 @@ class DataController extends Controller
         if(request()->file('photolink')){
             $filetype = request()->file('photolink')->getClientOriginalExtension();
             $blog->photolink = '/blogimageupload/'.$blog->place.'/'.$blog->photoname.'.'.$filetype;
-            request()->file('photolink')->storeAs('/storage/blogimageupload/'.$blog->place, $blog->photoname.'.'.$filetype);
+            request()->file('photolink')->storeAs('public/blogimageupload/'.$blog->place, $blog->photoname.'.'.$filetype);
         }
 
         $blog->save();
