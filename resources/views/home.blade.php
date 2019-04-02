@@ -1,23 +1,23 @@
-@extends('layouts.app')
-
+@extends('layout')
+@section('title')Cat &amp Leon Navigate The Planet
+@endsection
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" style="max-height: 700px">
+            <div class="overlay"></div>
+            <div class="carousel-item active">
+                <img src="storage/images/1.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="storage/images/2.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="storage/images/3.jpeg" class=" d-blockw-100" alt="...">
             </div>
         </div>
     </div>
-</div>
+    </div>
 @endsection
+
+
