@@ -17,6 +17,7 @@ Route::get('/home', 'PagesController@home');
 Route::get('aboutus', 'PagesController@aboutus');
 
 Route::get('/gallery', 'PagesController@gallery');
+Route::get('/gallerydetail/{place}', 'PagesController@gallerydetail');
 
 Route::get('/admin', 'PagesController@admin');
 Route::get('/newplace', 'PagesController@newplace');
@@ -29,8 +30,6 @@ Route::get('/blogs/{place}', 'PagesController@blogs');
 
 //to show the full blog
 Route::get('blog/{id}', 'PagesController@blog');
-
-
 
 Route::post('/datacontroller/place', 'DataController@storeplace');
 Route::post('/datacontroller/blog', 'DataController@storeblog');

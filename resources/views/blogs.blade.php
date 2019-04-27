@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h2 align="center">Navigate The Planet - {{ $country }}</h2>
+                <h2 align="center" style="padding: 10px">Navigate The Planet - {{ $country }}</h2>
             </div>
         </div>
     <?php $i = 0 ?>
@@ -19,16 +19,18 @@
 
         <!-- to hold the blog box -->
             <div class="col-md-3">
-                <div class="blogpost" style="padding: 5px; background-color: #fff;border-radius: 10px;min-height: 439px;">
-                    <b>{{ $blogpost->title }}</b>
+                <div class="blogpost" style="padding: 8px; background-color: #fff;border-radius: 10px;min-height: 500px;max-height :500px;">
+                    <b style="min-height: 186px; max-height: 186px">{{ $blogpost->title }}</b>
                     <br/>
                     Date: <?php echo date('d-m-Y', strtotime($blogpost->date));?>
                     <br/><br/>
-                    <img src="/storage/{{$blogpost->photolink}}" width="100%" style="max-height: 237px;">
+                    <img src="/storage/{{$blogpost->photolink}}" width="100%" style="max-height: 230px; border-radius: 10px;">
                     <br/><br/>
-                    {!!Str::limit($blogpost->blogpost, 120)!!} <a href="/blog/{{$blogpost->id}}">Read More</a>
+                    {!!Str::limit($blogpost->blogpost, 120)!!}
+                    <br/><a href="/blog/{{$blogpost->id}}" style="color: #FF8826; font-weight: bold;">Read More</a>
                     @auth
-                        <a href="/editblog/{{$blogpost->id}}">Edit</a></a>
+                        <br/>
+                        <a href="/editblog/{{$blogpost->id}}" style="color: #FF8826">Edit</a></a>
                         <br/>
                     @endauth
                 </div>

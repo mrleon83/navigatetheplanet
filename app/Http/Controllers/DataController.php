@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \App\Places;
 use \App\BlogText;
 
+
 class DataController extends Controller
 {
     public function storeplace(){

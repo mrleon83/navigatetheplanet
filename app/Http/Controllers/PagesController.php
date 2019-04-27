@@ -35,9 +35,17 @@ class PagesController extends Controller
     }
     public function gallery(){
         $places = \App\BlogText::select('place')->distinct('place')->get();
-        $images = \App\BlogText::all()->where('photolink', '!=', '')->take(1);
+        $images = \App\BlogText::all();
         return view('gallery',['images'=>$images, 'places'=>$places]);
     }
+    public function gallerydetail(Request $request){
+        $place = $request->place;
+        $places = \App\BlogText::select('place')->distinct('place')->get();
+        $images = \App\BlogText::all()->where('place', '=', $place);
+        return view('gallerydetail',['images'=>$images, 'places'=>$places, 'place'=>$place]);
+    }
+
+
 
     //admin area stuff
     public function editblog(Request $request){

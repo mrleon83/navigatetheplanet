@@ -57,16 +57,16 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family: 'Montserrat', cursive;background-color: #007D69 !important" >
-    <a class="navbar-brand" href="/home">Cat &amp Leon Navigate The Planet</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family: 'Montserrat';background-color: #93AEB2 !important" >
+    <a class="navbar-brand" href="/">Cat &amp Leon Navigate The Planet</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse navbar-dark bg-dark" style="background-color: #007D69 !important" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarSupportedContent" style="background-color: #93AEB2 !important">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/aboutus">About Us</a>
@@ -103,10 +103,10 @@
 
 <!-- end of menu -->
 @yield('content')
-<footer style="text-align: center; background-color: #007D69; color: #ffffff; padding: 10px;">
+<footer style="text-align: center; background-color: #B29883; color: #ffffff; padding: 10px;margin-top: 20px;">
     Cat & Leon Navigate The Planet <?php echo date("Y"); ?>
 
-    <a class="nav-link" href="http://leonkimpton.co.uk" style="color: #ffffff">Crafted by Leon Kimpton</a>
+    <a class="nav-link" href="#" style="color: #ffffff">Created by Leon Kimpton</a>
 
 </footer>
 </body>

@@ -3,7 +3,7 @@
 @endsection
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <div class="row">
             <div class="col-md-12">
                 <h4 align="center" style="padding: 10px;">About Us</h4>

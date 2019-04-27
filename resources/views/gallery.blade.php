@@ -3,25 +3,51 @@
 @endsection
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid gallery">
 
-        @foreach($places as $place)
-            <?php
-            $files = Storage::disk('public')->files('/'.$place->place);
-            foreach($files as $file){ ?>
-            <div class="row" style="min-height: 200px; margin-top: 10px;">
-                <div class="col-md-12">
-                    <div class="blogpost" style="padding: 5px; background-color: #fff;border-radius: 10px;min-height: 250px;">
-                        <?php
-                        echo '<img src=/storage/'. $file .' class="d-block w-100" alt="...">';
-                        ?>
+    <?php $i = 0 ?>
+    @foreach($places as $place)
+        <?
+        //new row when var set to 0
+        if($i == 0){
+            echo '<div class="row" style="min-height: 200px; margin-top: 10px;">';
+        } ?>
+
+        <!-- to hold the blog box -->
+            <div class="col-md-3">
+                <a href="gallerydetail/{{ $place->place }}" id="{{ $place->place }}" onclick="return getGallery(this.id)" style="color:#666">
+                    <div class="blogpost" style="padding: 5px; background-color: #fff;border-radius: 10px; min-height: 200px;">
+
+                        <div class="placetitle" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);font-family: Montserrat;font-size: 2em;">
+                            {{ $place->place }}
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <?php
-            }
+
+            <!-- to close the row div -->
+            <?php $i++;
+            if($i == 4 ){
+                echo "</div>";
+                $i = 0;} ?>
+        @endforeach
+
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid">
+        @foreach($images as $image)
+            <?php /*
+                if($image->place == 'Sri Lanka'){
+                    echo $image->photolink;
+                    echo "<br/>";
+                }*/
             ?>
         @endforeach
     </div>
-
 @endsection
